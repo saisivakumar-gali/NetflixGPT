@@ -8,8 +8,8 @@ const VideoBackGround = ({movieId}) => {
 useMovieTrailer(movieId);
 
   return (
-    <div className='w-screen h-screen absolute left-0 top-0 -z-10 '>
-      <iframe className='w-screen aspect-video overflow-hidden'  src={"https://www.youtube.com/embed/"+trailerVideo?.key+"?&autoplay=1&mute=1&controls=0&loop=1&showinfo=0" }title="YouTube video player"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen ></iframe>
+    <div className='w-full  overflow-x-hidden'>
+      <iframe className='w-full aspect-video '  src={"https://www.youtube.com/embed/"+trailerVideo?.key+"?&autoplay=1&mute=1&controls=0&loop=1&playlist="+trailerVideo?.key+"&showinfo=0" }title="YouTube video player"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen ></iframe>
     </div>
   )
 }
