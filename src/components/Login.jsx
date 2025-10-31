@@ -7,6 +7,7 @@ import {auth} from "../utils/firebase";
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { BG_URL } from '../utils/constants';
 
 const Login = () => {
   const [isSignInForm, setisSignInForm] = useState(true);
@@ -79,7 +80,7 @@ createUserWithEmailAndPassword(auth, email.current.value,password.current.value)
     <div>
         <Header/>
         <div className='absolute' >
-            <img src="https://assets.nflxext.com/ffe/siteui/vlv3/024bfb98-9e9d-441d-9c5f-d2c798d8e42f/web/IN-en-20251013-TRIFECTA-perspective_b6324826-0535-47c5-be5f-4f50e9663eaf_large.jpg" alt="" className='w-screen h-screen' />
+            <img src={BG_URL} alt="" className='w-screen h-screen' />
         </div>
         <form onSubmit={(e)=>e.preventDefault()} className='absolute w-3/12 my-40 mx-auto left-0 right-0 p-12 bg-black/80 text-white rounded-lg ' >
 
